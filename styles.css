@@ -1,0 +1,22 @@
+.container .btn {
+    width: 34rem;
+    height: 5rem;
+    margin-top: 5rem;
+}
+
+.container #rent-button:hover {
+    background-color: green;
+}
+.container #return-button:hover {
+    background-color: red;
+}
+#info {
+    color: black;
+    background-color: silver;
+}
+#info p {
+    font-size: 1.5rem;
+}
+form {
+    display: none;
+}

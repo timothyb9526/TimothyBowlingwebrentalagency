@@ -6,15 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="themes.css">
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
-<body>
+<body class="bg-secondary">
+    <div class="container d-flex justify-content-center">
+        <img src="fontawesome/svgs/solid/campground.svg" width="300" height="300" alt="">
+    </div>
+    <div class="d-flex justify-content-center container">
+        <button id="rent-button" type="button" class="btn">
+            <img src="fontawesome/svgs/solid/dollar-sign.svg" width="60" height="60" alt="">
+        </button>
+        <button id="return-button" type="button" class="btn">
+            <img src="fontawesome/svgs/solid/undo.svg" width="60" height="60" alt="">
+        </button>
+    </div>
+    <form id="form" class="container mt-4">
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="First name">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Last name">
+            </div>
+        </div>
+        <div class="form-row mt-4">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-row mt-4">
+            <div class="col">
+                <input type="tel" class="form-control" placeholder="888 888 8888" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="12">
+            </div>
+        </div>
+        <div class="form-row mt-4">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="address">
+            </div>
+        </div>
+    </form>
+    <div id="cabin-info" class="text-center container mt-5">
 
-    <script src="js/jquery.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.js"></script>
+    </div>
+
+    <script id="rentals" type="text/x-handlebars-template">
+        <button type="button" class="btn-lg bg-secondary border-0">
+                <img src={{coverImage}} class="img-fluid" alt="g">
+                <div id="info" class="border">
+                    <h1>Price and Description</h1>
+                    <p>Price: ${{price}} a night</p>
+                    <p>Description: {{description}}</p>
+                </div>
+        </button>
+    </script>
+
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/popper.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="fontawesome/js/fontawesome.js"></script>
+    <script src="handlebars/handlebars.js"></script>
+    <script src="rental_data.js"></script>
     <script src="javascript.js"></script>
 </body>
 
