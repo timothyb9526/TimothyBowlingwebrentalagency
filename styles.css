@@ -1,22 +1,54 @@
 .container .btn {
-    width: 34rem;
-    height: 5rem;
+    width: 70rem;
+    height: 7rem;
     margin-top: 5rem;
 }
 
 .container #rent-button:hover {
     background-color: green;
 }
-.container #return-button:hover {
-    background-color: red;
-}
 #info {
     color: black;
     background-color: silver;
 }
 #info p {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
+
 form {
-    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+input {
+    display: inline-block;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    height: 3rem;
+    width: 70rem;
+}
+input:invalid {
+    border: 1px solid;
+    border-radius: 0.5rem;
+    border-color: red;
+}
+.form-check-input {
+    width: 10rem;
+    height: 3rem;
+    text-align: center;
+}
+.form-check-label {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    margin-right: 5rem;
+}
+.button {
+    background-color: #000000;
+    border: 1px solid #9d9d9d;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-size: 1rem;
+    width: 50rem;
+    height: 5rem;
 }

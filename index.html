@@ -19,50 +19,63 @@
     </div>
     <div class="d-flex justify-content-center container">
         <button id="rent-button" type="button" class="btn">
-            <img src="fontawesome/svgs/solid/dollar-sign.svg" width="60" height="60" alt="">
-        </button>
-        <button id="return-button" type="button" class="btn">
-            <img src="fontawesome/svgs/solid/undo.svg" width="60" height="60" alt="">
+            <img src="fontawesome/svgs/solid/dollar-sign.svg" width="70" height="70" alt="">
         </button>
     </div>
-    <form id="form" class="container mt-4">
-        <div class="form-row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="First name">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Last name">
-            </div>
-        </div>
-        <div class="form-row mt-4">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Email">
-            </div>
-        </div>
-        <div class="form-row mt-4">
-            <div class="col">
-                <input type="tel" class="form-control" placeholder="888 888 8888" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="12">
-            </div>
-        </div>
-        <div class="form-row mt-4">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="address">
-            </div>
-        </div>
-    </form>
     <div id="cabin-info" class="text-center container mt-5">
+        <form>
+            <div>
+                <label for="Name">Name
+                    <i>(Must be more than 3 characters and less than 10 characters)</i>
+                </label>
+                <input type="text" id="name" placeholder="James" minlength="3" maxlength="10" required>
+            </div>
+
+            <div>
+                <label for="Email">Email
+                    <i>(Must be a gmail account)</i>
+                </label>
+                <input type="text" placeholder="drone@gmail.com" pattern=".+@gmail.com" size="30" id="email" required>
+            </div>
+
+            <div>
+                <label for="number">Phone</label>
+                <input type="tel" id="phone" placeholder="888 888 8888" maxlength="12" required>
+            </div>
+
+            <div>
+                <label for="address">Address
+                    <i>(Can contain spaces)</i>
+                </label>
+                <input type="address" id="address" pattern="[A-Za-z0-9 ]+" placeholder="12BuckleMyShoe34" required>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="cash" value="cash">
+                <label class="form-check-label" for="cash">Cash</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="check" value="oheck">
+                <label class="form-check-label" for="check">Check</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="credit" value="card">
+                <label class="form-check-label" for="card">Card</label>
+            </div>
+            <input type="submit" class="button" value="Submit">
+        </form>
 
     </div>
-
     <script id="rentals" type="text/x-handlebars-template">
-        <button type="button" class="btn-lg bg-secondary border-0">
-                <img src={{coverImage}} class="img-fluid" alt="g">
+        <button id="rental" type="button" class="text-left btn-lg bg-secondary border-0">
+                <img src={{picture}} class="img-fluid" alt="g" width="900" height="900">
                 <div id="info" class="border">
                     <h1>Price and Description</h1>
                     <p>Price: ${{price}} a night</p>
                     <p>Description: {{description}}</p>
+                    <p>location: {{location}}</p>
                 </div>
         </button>
+        
     </script>
 
     <script src="bootstrap/js/jquery.js"></script>
