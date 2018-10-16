@@ -1,6 +1,8 @@
 var element = document.getElementById("cabin-info");
 var rentButton = document.getElementById("rent-button");
 var rentalButton = document.getElementById("rental");
+var formShow = document.getElementById("form");
+
 function rent() {
     var source = document.getElementById("rentals").innerHTML;
     var template = Handlebars.compile(source);
@@ -16,6 +18,5 @@ function rent() {
     }
     element.insertAdjacentHTML("afterbegin", result);
     rentButton.setAttribute("disabled", true);
-    returnButton.setAttribute("disabled", true);
 }
 rentButton.addEventListener("click", rent);
