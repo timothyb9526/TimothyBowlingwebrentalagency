@@ -1,7 +1,9 @@
 var element = document.getElementById("cabin-info");
 var rentButton = document.getElementById("rent-button");
 var rentalButton = document.getElementById("rental");
-var formShow = document.getElementById("form");
+var rental = document.getElementById("hide");
+var message = document.getElementById("show");
+var input = document.querySelectorAll("input");
 
 function rent() {
     var source = document.getElementById("rentals").innerHTML;
@@ -20,3 +22,12 @@ function rent() {
     rentButton.setAttribute("disabled", true);
 }
 rentButton.addEventListener("click", rent);
+
+var form = document.getElementById("form");
+
+form.addEventListener("submit", function() {
+    rental.style.display = "none";
+    message.style.fontSize = "5rem";
+    message.style.color = "black";
+    message.style.fontWeight = "bolder";
+});
