@@ -32,12 +32,6 @@ input {
     width: 70rem;
 }
 
-.form-check-input {
-    width: 10rem;
-    height: 3rem;
-    text-align: center;
-}
-
 .form-check-label {
     margin-bottom: 3rem;
     font-size: 1.5rem;
@@ -61,19 +55,10 @@ input {
     cursor: default;
 }
 
-#rental {
+#label {
     display: grid;
     grid-template-columns: auto auto;
     grid-column-gap: 0.5rem;
-    background-color: slategrey;
-}
-
-#rental:hover {
-    background-color: red;
-}
-
-#rental:focus {
-    background-color: red;
 }
 
 button {
@@ -87,17 +72,34 @@ button {
 img {
     width: 100%;
 }
-
-#payment button {
-    color: black;
-    font-weight: bold;
-    font-size: 2rem;
-    background-color: dimgray;
+.form-check-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    background-color: #12c0bd;
+    margin-left: 2rem;
+    color: rgb(0, 0, 0);
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 7px;
 }
-
-#payment button:hover {
-    background-color: red;
+.form-check-input:checked::before {
+    position: absolute;
+    top: 0.9rem;
+    left: 25px;
+    bottom: 35px;
+    content: "\02143";
+    transform: rotate(40deg);
 }
-#payment button:focus {
-    background-color: red;
+.form-check-input:hover {
+    background-color: white;
+}
+.form-check-input:checked {
+    background-color: #f1f1f1;
+}
+label {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
 }

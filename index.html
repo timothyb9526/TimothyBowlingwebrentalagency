@@ -27,12 +27,14 @@
                     </label>
                     <input class="input img-fluid" type="text" id="name" placeholder="James" minlength="3" maxlength="10" required>
                 </div>
+
                 <div>
                     <label for="Email">Email
                         <i>(Must be a gmail account)</i>
                     </label>
                     <input class="input img-fluid" type="email" placeholder="drone@gmail.com" pattern=".+@gmail.com" size="30" id="email" required>
                 </div>
+
                 <div>
                     <label for="number">Phone</label>
                     <input class="input img-fluid" type="tel" id="phone" placeholder="888 888 8888" maxlength="12" required>
@@ -44,19 +46,23 @@
                     </label>
                     <input class="input img-fluid" type="address" id="address" pattern="[A-Za-z0-9 ]+" placeholder="12BuckleMyShoe34" required>
                 </div>
-                <div id="payment">
-                    <div class="mb-3">
-                        <button id="cash" type="button" class="border-0">Cash</button>
-                    </div>
-                    <div class="mb-3">
-                        <button id="check" type="button" class="border-0">Check</button>
-                    </div>
-                    <div class="mb-3">
-                        <button id="card" type="button" class="border-0">Card</button>
-                    </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="cash" value="cash">
+
+                    <label class="form-check-label mb-4" for="cash">Cash</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="check" value="check">
+
+                    <label class="form-check-label mb-4" for="check">Check</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="credit" value="card">
+
+                    <label class="form-check-label mb-4" for="card">Card</label>
                 </div>
             </div>
-
             <button id="rent-button" type="button" class="btn img-fluid">
                 <img src="fontawesome/svgs/solid/home.svg" width="70" height="70" alt="">
             </button>
@@ -68,7 +74,8 @@
 
     </div>
     <script id="rentals" type="text/x-handlebars-template">
-        <button id="rental" type="button" class="text-left border-0 active">
+        <input id="rental" type="checkbox" class="form-check-input text-left border-0">
+        <label id="label" class="form-check-label mb-4" for="card">
                 <img src={{picture}} class="img-fluid" alt="g" width="1100" height="900">
                 <div id="info" class="border">
                     <h1>Price and Description</h1>
@@ -76,7 +83,7 @@
                     <p>Description: {{description}}</p>
                     <p>location: {{location}}</p>
                 </div>
-            </button>
+            </label>
         
     </script>
 
