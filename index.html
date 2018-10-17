@@ -18,50 +18,57 @@
         <img src="fontawesome/svgs/solid/campground.svg" width="300" height="300" alt="">
     </div>
     <div id="show" class="container d-flex justify-content-center">Thank you.</div>
-    <div id="hide" class="justify-content-center container">
+    <div id="hide" class="justify-content-center">
         <form id="form">
-            <div>
-                <label for="Name">Name
-                    <i>(Must be more than 3 characters and less than 10 characters)</i>
-                </label>
-                <input class="input img-fluid" type="text" id="name" placeholder="James" minlength="3" maxlength="10" required>
+            <div class="container">
+                <div id="form-div">
+                    <label for="Name">Name
+                        <i>(Must be more than 3 characters and less than 10 characters)</i>
+                    </label>
+                    <input class="input img-fluid" type="text" id="name" placeholder="James" minlength="3" maxlength="10" required>
+                </div>
+                <div>
+                    <label for="Email">Email
+                        <i>(Must be a gmail account)</i>
+                    </label>
+                    <input class="input img-fluid" type="email" placeholder="drone@gmail.com" pattern=".+@gmail.com" size="30" id="email" required>
+                </div>
+                <div>
+                    <label for="number">Phone</label>
+                    <input class="input img-fluid" type="tel" id="phone" placeholder="888 888 8888" maxlength="12" required>
+                </div>
+
+                <div>
+                    <label for="address">Address
+                        <i>(Can contain spaces)</i>
+                    </label>
+                    <input class="input img-fluid" type="address" id="address" pattern="[A-Za-z0-9 ]+" placeholder="12BuckleMyShoe34" required>
+                </div>
+                <div id="payment">
+                    <div class="mb-3">
+                        <button id="cash" type="button" class="border-0">Cash</button>
+                    </div>
+                    <div class="mb-3">
+                        <button id="check" type="button" class="border-0">Check</button>
+                    </div>
+                    <div class="mb-3">
+                        <button id="card" type="button" class="border-0">Card</button>
+                    </div>
+                </div>
             </div>
-            <div>
-                <label for="Email">Email
-                    <i>(Must be a gmail account)</i>
-                </label>
-                <input class="input img-fluid" type="email" placeholder="drone@gmail.com" pattern=".+@gmail.com" size="30" id="email" required>
-            </div>
-            <div>
-                <label for="number">Phone</label>
-                <input class="input img-fluid" type="tel" id="phone" placeholder="888 888 8888" maxlength="12" required>
-            </div>
-            <div>
-                <label for="address">Address
-                    <i>(Can contain spaces)</i>
-                </label>
-                <input class="input img-fluid" type="address" id="address" pattern="[A-Za-z0-9 ]+" placeholder="12BuckleMyShoe34" required>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="cash" value="cash">
-                <label class="form-check-label" for="cash">Cash</label>
-                <input class="form-check-input" type="checkbox" id="check" value="check">
-                <label class="form-check-label" for="check">Check</label>
-                <input class="form-check-input" type="checkbox" id="credit" value="card">
-                <label class="form-check-label" for="card">Card</label>
-            </div>
+
             <button id="rent-button" type="button" class="btn img-fluid">
                 <img src="fontawesome/svgs/solid/home.svg" width="70" height="70" alt="">
             </button>
-            <div id="cabin-info" class="text-left container mt-5">
+            <div id="cabin-info" class="text-left mt-5">
 
             </div>
             <input id="form-button" type="submit" value="Rent" class="button img-fluid">
         </form>
-    </div>
 
+    </div>
     <script id="rentals" type="text/x-handlebars-template">
-        <input id="rental" type="checkbox" class="text-left form-check-input bg-secondary border-0">
+        <button id="rental" type="button" class="text-left border-0 active">
                 <img src={{picture}} class="img-fluid" alt="g" width="1100" height="900">
                 <div id="info" class="border">
                     <h1>Price and Description</h1>
@@ -69,7 +76,8 @@
                     <p>Description: {{description}}</p>
                     <p>location: {{location}}</p>
                 </div>
-        </input>
+            </button>
+        
     </script>
 
     <script src="bootstrap/js/jquery.js"></script>

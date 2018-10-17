@@ -4,15 +4,18 @@
     margin-top: 5rem;
 }
 
-.container #rent-button:hover {
-    background-color: green;
+#rent-button:hover {
+    background-color: rgb(151, 151, 151);
 }
+
 #info {
     color: black;
     background-color: silver;
 }
+
 #info p {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    font-weight: bolder;
 }
 
 form {
@@ -34,11 +37,13 @@ input {
     height: 3rem;
     text-align: center;
 }
+
 .form-check-label {
     margin-bottom: 3rem;
     font-size: 1.5rem;
     margin-right: 5rem;
 }
+
 .button {
     background-color: #000000;
     border: 1px solid #9d9d9d;
@@ -47,9 +52,52 @@ input {
     font-size: 1rem;
     height: 5rem;
 }
+
 #show {
     color: transparent;
 }
+
 #show:hover {
     cursor: default;
+}
+
+#rental {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 0.5rem;
+    background-color: slategrey;
+}
+
+#rental:hover {
+    background-color: red;
+}
+
+#rental:focus {
+    background-color: red;
+}
+
+button {
+    width: 100%;
+}
+
+.button {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+#payment button {
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: dimgray;
+}
+
+#payment button:hover {
+    background-color: red;
+}
+#payment button:focus {
+    background-color: red;
 }
