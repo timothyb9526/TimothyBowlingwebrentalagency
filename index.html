@@ -19,71 +19,94 @@
     </div>
     <div id="show" class="container d-flex justify-content-center">Thank you.</div>
     <div id="hide" class="justify-content-center">
-        <form id="form">
-            <div class="container">
-                <div id="form-div">
-                    <label for="Name">Name
-                        <i>(Must be more than 3 characters and less than 10 characters)</i>
-                    </label>
-                    <input class="input img-fluid" type="text" id="name" placeholder="James" minlength="3" maxlength="10" required>
+        <form id="form" class="container mt-5">
+            <div id="form-div">
+                <label for="Name">Name
+                    <i>(Must be more than 3 characters and less than 10 characters)</i>
+                </label>
+                <input class="form-control" type="text" id="name" placeholder="James" minlength="3" maxlength="10"
+                    required>
+            </div>
+
+            <div>
+                <label for="Email">Email
+                    <i>(Must be a gmail account)</i>
+                </label>
+                <input class="form-control" type="email" placeholder="drone@gmail.com" pattern=".+@gmail.com" size="30"
+                    id="email" required>
+            </div>
+
+            <div>
+                <label for="number">Phone</label>
+                <input class="form-control" type="tel" id="phone" placeholder="888-888-8888" maxlength="12" required>
+            </div>
+
+            <div>
+                <label for="address">Address
+                </label>
+                <input class="form-control" type="address" id="address" pattern="[A-Za-z0-9 ]+" placeholder="Jefferson st."
+                    required>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" placeholder="jackson" required>
                 </div>
-
-                <div>
-                    <label for="Email">Email
-                        <i>(Must be a gmail account)</i>
-                    </label>
-                    <input class="input img-fluid" type="email" placeholder="drone@gmail.com" pattern=".+@gmail.com" size="30" id="email" required>
+                <div class="form-group col-md-4">
+                    <label for="state">State</label>
+                    <select id="state" class="form-control" required>
+                        <option selected>Choose...</option>
+                        <option>Mississippi</option>
+                        <option>Alabama</option>
+                        <option>Arkansa</option>
+                        <option>Tennesse</option>
+                        <option>Kentucky</option>
+                        <option>Louisianna</option>
+                    </select>
                 </div>
-
-                <div>
-                    <label for="number">Phone</label>
-                    <input class="input img-fluid" type="tel" id="phone" placeholder="888 888 8888" maxlength="12" required>
-                </div>
-
-                <div>
-                    <label for="address">Address
-                        <i>(Can contain spaces)</i>
-                    </label>
-                    <input class="input img-fluid" type="address" id="address" pattern="[A-Za-z0-9 ]+" placeholder="12BuckleMyShoe34" required>
-                </div>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="cash" value="cash">
-
-                    <label class="form-check-label mb-4" for="cash">Cash</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="check" value="check">
-
-                    <label class="form-check-label mb-4" for="check">Check</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="credit" value="card">
-
-                    <label class="form-check-label mb-4" for="card">Card</label>
+                <div class="form-group col-md-2">
+                    <label for="zip">Zip</label>
+                    <input type="text" class="form-control" id="zip" placeholder="34516" required>
                 </div>
             </div>
-            <button id="rent-button" type="button" class="btn img-fluid">
-                <img src="fontawesome/svgs/solid/home.svg" width="70" height="70" alt="">
-            </button>
-            <div id="cabin-info" class="text-left mt-5">
 
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="cash" value="cash">
+
+                <label class="form-check-label mb-4" for="cash">Cash</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="check" value="check">
+
+                <label class="form-check-label mb-4" for="check">Check</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="credit" value="card">
+
+                <label class="form-check-label mb-4" for="card">Card</label>
             </div>
             <input id="form-button" type="submit" value="Rent" class="button img-fluid">
         </form>
+        <div id="cabin-info" class="text-left mt-5">
+
+
+        </div>
 
     </div>
     <script id="rentals" type="text/x-handlebars-template">
-        <input id="rental" type="checkbox" class="form-check-input text-left border-0">
-        <label id="label" class="form-check-label mb-4" for="card">
-                <img src={{picture}} class="img-fluid" alt="g" width="1100" height="900">
+        <button id="rental" type="button" class="rental btn-lg text-left border-0">
+        <span id="label" class="form-check-label mb-4">
+                <img src={{picture}} class="img-fluid" alt="g">
                 <div id="info" class="border">
                     <h1>Price and Description</h1>
                     <p>Price: ${{price}} a night</p>
                     <p>Description: {{description}}</p>
                     <p>location: {{location}}</p>
                 </div>
-            </label>
+            </span>
+        </button>
         
     </script>
 
