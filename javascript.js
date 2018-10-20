@@ -49,14 +49,42 @@ function rentalButtonLoad() {
 }
 
 function rentItem() {
+    var num = document.getElementById("number").value;
+    var name = document.getElementById("name").value;
+    var zip = document.getElementById("zip").value;
+    var city = document.getElementById("city").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var address = document.getElementById("address").value;
+    /*  var thankYou = document.getElementById("thanksMessage"); */
+    var product = document.getElementById("product");
     var input = document.querySelector("#form-index");
     var index = input.value;
-    console.warn(index);
     var item = RENTAL_DATA.cabins[index];
     var price = item.price;
-    console.log(item);
-    var priceSpan = document.querySelector("#price");
-    priceSpan.innerHTML += price;
+    productInfo = document.getElementById("product-info");
+    var priceSpan = document.querySelector("#u-price");
+    var nameSpan = document.querySelector("#u-name");
+    /* thankYou.innerHTML += name; */
+    product.setAttribute("class", "text-left");
+    product.innerHTML +=
+        "User Info: <br />" +
+        "email adrress: " +
+        email +
+        "<br />" +
+        "Phone number: " +
+        phone +
+        "<br />" +
+        "Mailing adrress: " +
+        address +
+        " " +
+        city +
+        " " +
+        zip;
+    nameSpan.innerHTML += name;
+    productInfo.setAttribute("class", "product-border");
+    priceSpan.innerHTML +=
+        "Your total for renting for " + num + " days will be $" + price * num;
     rental.style.display = "none";
     message.classList.add("special-class");
 }

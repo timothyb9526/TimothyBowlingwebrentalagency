@@ -5,8 +5,7 @@
 }
 
 #info {
-    color: black;
-    background-color: silver;
+    color: white;
 }
 
 #info p {
@@ -40,8 +39,9 @@ input {
     height: 5rem;
     width: 100%;
 }
-#message:hover {
-    cursor: default;
+
+i {
+    color: black;
 }
 
 #inner-html {
@@ -89,7 +89,7 @@ label {
 }
 .rental {
     border-style: outset;
-    background-color: silver;
+    background-color: transparent;
     border-radius: 3rem;
     padding: 2rem;
 }
@@ -101,7 +101,16 @@ label {
     background-color: silver;
     border-radius: 3rem;
     padding: 2rem;
-    font-size: 5rem;
+    font-size: 2rem;
     color: black;
-    font-weight: bolder;
+}
+
+.product-border {
+    border: 1px solid white;
+    border-left: 0;
+    border-right: 0;
+    padding: 10rem;
+}
+#u-name {
+    font-size: 5rem;
 }
