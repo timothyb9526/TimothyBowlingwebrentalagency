@@ -56,19 +56,17 @@ function rentItem() {
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
     var address = document.getElementById("address").value;
-    /*  var thankYou = document.getElementById("thanksMessage"); */
+    var state = document.getElementById("state").value;
     var product = document.getElementById("product");
     var input = document.querySelector("#form-index");
     var index = input.value;
     var item = RENTAL_DATA.cabins[index];
     var price = item.price;
-    productInfo = document.getElementById("product-info");
+    var productInfo = document.getElementById("product-info");
     var priceSpan = document.querySelector("#u-price");
     var nameSpan = document.querySelector("#u-name");
-    /* thankYou.innerHTML += name; */
     product.setAttribute("class", "text-left");
     product.innerHTML +=
-        "User Info: <br />" +
         "email adrress: " +
         email +
         "<br />" +
@@ -80,6 +78,8 @@ function rentItem() {
         " " +
         city +
         " " +
+        state +
+        " " +
         zip;
     nameSpan.innerHTML += name;
     productInfo.setAttribute("class", "product-border");
@@ -90,7 +90,7 @@ function rentItem() {
 }
 
 function reset() {
-    document.querySelector("form").reset();
+    document.querySelectorAll("form").reset();
 }
 
 function startUp() {

@@ -4,6 +4,10 @@
     margin-top: 5rem;
 }
 
+#form-index {
+    display: none;
+}
+
 #info {
     color: white;
 }
@@ -51,7 +55,6 @@ i {
 }
 
 button {
-    width: 100%;
     display: block;
     border-radius: 5%;
 }
@@ -109,7 +112,7 @@ label {
     border: 1px solid white;
     border-left: 0;
     border-right: 0;
-    padding: 10rem;
+    padding: 3rem;
 }
 #u-name {
     font-size: 5rem;
