@@ -47,10 +47,10 @@
 
             <div>
                 <label for="number">Phone
-                    <i>(xxx-xxx-xxxx)</i>
+                    <i>(No spaces or special characters)</i>
                 </label>
-                <input class="form-control" type="tel" pattern="^\d{3}-\d{3}-\d{4}" id="phone" placeholder="888-888-8888"
-                    maxlength="12" required>
+                <input class="form-control" type="tel" pattern="^[0-9]{10}" id="phone" placeholder="888-888-8888"
+                    maxlength="10" required>
             </div>
 
             <div>
@@ -136,7 +136,6 @@
                         placeholder="34516" required>
                 </div>
             </div>
-
             <div class="custom-control custom-radio custom-control-inline">
                 <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input"
                     checked>
@@ -150,23 +149,6 @@
                 <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
                 <label class="custom-control-label" for="customRadioInline3">Card</label>
             </div>
-
-
-            <!-- <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="cash" value="1">
-
-                <label class="form-check-label mb-4">Cash</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="check" value="2">
-
-                <label class="form-check-label mb-4">Check</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="credit" value="3">
-
-                <label class="form-check-label mb-4">Card</label>
-            </div> -->
             <input id="form-button" type="submit" value="Rent" class="button img-fluid">
         </form>
         <div id="cabin-info" class="text-left mt-5">
