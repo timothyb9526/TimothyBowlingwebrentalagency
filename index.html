@@ -31,22 +31,24 @@
             <div id="form-div">
                 <input id="form-index">
                 <label for="Name">Name
-                    <i>(Must be more than 3 characters and less than 10 characters)</i>
+                    <i>(Must be more than 3 characters and less than 30 characters)</i>
                 </label>
-                <input class="form-control" type="text" id="name" pattern="[A-Za-z]+" placeholder="James" minlength="3"
-                    maxlength="10" required>
+                <input class="form-control" type="text" id="name" pattern="[A-Za-z\s]+" placeholder="James" minlength="3"
+                    maxlength="30" required>
             </div>
 
             <div>
                 <label for="Email">Email
-                    <i>(Must be a gmail account)</i>
+                    <i>(can be any email)</i>
                 </label>
-                <input class="form-control" type="email" pattern=".+@gmail.com" placeholder="drone@gmail.com" size="30"
-                    id="email" required>
+                <input class="form-control" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="drone@gmail.com"
+                    size="30" id="email" required>
             </div>
 
             <div>
-                <label for="number">Phone</label>
+                <label for="number">Phone
+                    <i>(xxx-xxx-xxxx)</i>
+                </label>
                 <input class="form-control" type="tel" pattern="^\d{3}-\d{3}-\d{4}" id="phone" placeholder="888-888-8888"
                     maxlength="12" required>
             </div>
@@ -58,9 +60,9 @@
             </div>
 
             <div>
-                <label for="address">Address
+                <label for="address">Street
                 </label>
-                <input class="form-control" type="address" pattern="[A-Za-z0-9 ]+" id="address" placeholder="Jefferson st."
+                <input class="form-control" type="address" pattern="[A-Za-z0-9 \.]+" id="address" placeholder="Jefferson st."
                     required>
 
             </div>
@@ -68,7 +70,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="city">City</label>
-                    <input type="text" class="form-control" id="city" pattern="[A-Za-z]+" placeholder="jackson"
+                    <input type="text" class="form-control" id="city" pattern="[A-Za-z ]+" placeholder="jackson"
                         required>
                 </div>
                 <div class="form-group col-md-4">
@@ -130,25 +132,41 @@
                 </div>
                 <div class="form-group col-md-2">
                     <label for="zip">Zip</label>
-                    <input type="text" class="form-control" pattern="\d{5}" id="zip" placeholder="34516" required>
+                    <input type="text" class="form-control" pattern="[0-9]{5}" minlength="0" maxlength="5" id="zip"
+                        placeholder="34516" required>
                 </div>
             </div>
 
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" checked type="radio" id="cash" value="cash">
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input"
+                    checked>
+                <label class="custom-control-label" for="customRadioInline1">Cash</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline2">Check</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline3">Card</label>
+            </div>
 
-                <label class="form-check-label mb-4" for="cash">Cash</label>
+
+            <!-- <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="cash" value="1">
+
+                <label class="form-check-label mb-4">Cash</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="check" value="check">
+                <input class="form-check-input" type="radio" id="check" value="2">
 
-                <label class="form-check-label mb-4" for="check">Check</label>
+                <label class="form-check-label mb-4">Check</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="credit" value="card">
+                <input class="form-check-input" type="radio" id="credit" value="3">
 
-                <label class="form-check-label mb-4" for="card">Card</label>
-            </div>
+                <label class="form-check-label mb-4">Card</label>
+            </div> -->
             <input id="form-button" type="submit" value="Rent" class="button img-fluid">
         </form>
         <div id="cabin-info" class="text-left mt-5">
