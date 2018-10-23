@@ -1,11 +1,5 @@
 body {
-    background-image: url("pictures/images.jpeg");
-    background-color: black;
-    height: 400px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: darkslategrey;
 }
 
 #form-index {
